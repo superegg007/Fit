@@ -1,0 +1,76 @@
+<!--index.wxml-->
+<view>
+  <block wx:if="{{!hasUserInfo && canIUse}}">
+    <view class="header">
+      <button bindtap="login" style="width: 128rpx; height: 128rpx;margin: 0;padding: 0;border-radius: 50%;">
+        <image class="userinfo-avatar" src="/assets/images/defaultUser.jpeg" mode="cover"></image>
+      </button>
+      <view class="header_text" style="display: flex;flex-direction: column;justify-content: space-around">
+        <text style="font-size: 36rpx">未登录/注册</text>
+        <text style="font-size: 24rpx;color: rgb(172, 170, 170)">点击头像进行登录/注册</text>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="header">
+      <image class="userinfo-avatar" src="{{userInfo.avatar_url ? userInfo.avatar_url : userInfo.avatarUrl}}" mode="cover"></image>
+      <view class="header-details">
+        <view>{{userInfo.nickname ? userInfo.nickname : userInfo.nickName}}</view>
+        <view>这是一条有个性的签名</view>
+        <view class="liked-fan">
+          <view class="liked-fan-details">
+            <view>关注</view>
+            <view>{{userInfo.liked}}</view>
+          </view>
+          <view class="liked-fan-details">
+            <view>粉丝</view>
+            <view>0</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <view class="blank"></view>
+  <i-cell-group>
+    <view class="cell-total-title">我的圈子</view>
+    <i-cell title="我的发布" bind:click="myRelease" is-link>
+      <image slot="icon" src="/assets/images/mine/show.png" style="width: 20px; height: 20px; display: block" />
+    </i-cell>
+    <i-cell title="我的喜欢" bind:click="myLikes" is-link>
+      <image slot="icon" src="/assets/images/mine/star.png" style="width: 20px; height: 20px; display: block" />
+    </i-cell>
+    <i-cell title="搭配请求" bind:click="collocationRequest" is-link>
+      <image slot="icon" src="/assets/images/mine/dapeiq.png" style="width: 20px; height: 20px; display: block" />
+    </i-cell>
+    <i-cell title="我的请求" bind:click="myRequest" is-link>
+      <image slot="icon" src="/assets/images/mine/request.png" style="width: 20px; height: 20px; display: block" />
+    </i-cell>
+  </i-cell-group>
+  <view class="blank"></view>
+  <i-cell-group>
+    <view class="cell-total-title">常用</view>
+    <i-cell title="修改资料" bind:click="updateUser" is-link>
+      <image slot="icon" src="/assets/images/mine/c.png" style="width: 20px; height: 20px; display: block" />
+    </i-cell>
+    <i-cell title="常见问题" bind:click="commonProblems" is-link>
+      <image slot="icon" src="/assets/images/mine/q.png" style="width: 20px; height: 20px; display: block" />
+    </i-cell>
+    <i-cell title="建议反馈" bind:click="suggestedFeedback" is-link>
+      <image slot="icon" src="/assets/images/mine/f.png" style="width: 20px; height: 20px; display: block" />
+    </i-cell>
+    <i-cell title="设置" bind:click="setting" is-link>
+      <image slot="icon" src="/assets/images/mine/shezhi.png" style="width: 20px; height: 20px; display: block" />
+    </i-cell>
+  </i-cell-group>
+  <view class="blank"></view>
+  <block wx:if="{{hasUserInfo}}">
+    <view class="user-logout">
+      <button bindtap="handleLogOut">退出登录</button>
+    </view>
+  </block>
+</view>
+
+<i-modal title="请选择登录方式" visible="{{ visible }}" show-ok="{{ false }}" bind:cancel="userLoginCancel">
+  <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">使用微信绑定手机号登录</button>
+  <button bindtap="userLoginPhone">使用其它手机号登录</button>
+</i-modal>

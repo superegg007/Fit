@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "i-modal": "../../iview-weapp-master/modal/index",
+    "i-cell-group": "../../iview-weapp-master/cell-group/index",
+    "i-cell": "../../iview-weapp-master/cell/index",
+    "i-icon": "../../iview-weapp-master/icon/index"
+  },
+  "navigationBarBackgroundColor": "#8AA5D5",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "建议反馈",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
+}

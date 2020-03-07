@@ -1,0 +1,81 @@
+
+<!--index.wxml-->
+<view class="try">
+  <movable-area class="try-movable" scale-area >
+    <movable-view direction="all" bindchange="onChange" bindscale="onScale" scale scale-min="0.5" scale-max="5" scale-value="2" wx:for="{{myclick}}" wx:key="{{index}}">
+     <image class="m-pic" src="{{item.currentTarget.dataset.dataset.n}}" data-dataset="{{item}}" bindtap="deleteit" ></image>   
+    </movable-view>
+  </movable-area>
+  <view class="okbtn" wx:if="{{!showit}}" bindtap="changeOpened">
+  <image class="okpic" src="/assets/images/index/ok.png"></image>
+</view>
+  <view class="menu" wx:if="{{!showit}}">
+
+  <i-tabs current="{{ current_scroll }}"  scroll bindchange="handleChangeScroll">
+    <i-tab key="1" title="上衣"  >
+    </i-tab>
+    <i-tab key="2" title="裤子" >
+    </i-tab>
+    <i-tab key="3" title="裙装" >
+    </i-tab>
+    <i-tab key="4" title="鞋袜" >
+    </i-tab>
+    <i-tab key="5" title="配饰" >
+    </i-tab>
+    <i-tab key="6" title="包包">
+    </i-tab>
+    <i-tab key="7" title="搭配" >
+     
+    </i-tab>
+  </i-tabs>    
+<!-- <i-page current="{{ currentp }}" total="{{total}}" bind:change="handleChange">
+    <view slot="prev">
+        <i-icon type="return"></i-icon>
+    </view>
+    <view slot="next">
+        <i-icon type="enter"></i-icon>
+    </view>
+</i-page> -->
+
+ <scroll-view class="scroll-view_H" scroll-x="true"  wx:if="{{tab1}}"  >
+  <view class="scrollx" wx:for="{{imageUrl}}" wx:key="{{index}}" >
+     <image class="c-pic" src="{{item.n}}" bindtap="startit" data-dataset="{{item}}" ></image>   
+  </view>   
+  </scroll-view>
+
+  <scroll-view class="scroll-view_H" scroll-x="true"  wx:if="{{tab2}}"  >
+  <view class="scrollx" wx:for="{{imageUrl}}" wx:key="{{index}}" >
+     <image class="c-pic" src="{{item.n}}" bindtap="startit" data-dataset="{{item}}"></image>   
+  </view>   
+  </scroll-view>
+
+ <scroll-view class="scroll-view_H" scroll-x="true"  wx:if="{{tab3}}"  >
+  <view class="scrollx" wx:for="{{imageUrl}}" wx:key="{{index}}" >
+     <image class="c-pic" src="{{item.n}}" bindtap="startit" data-dataset="{{item}}"></image>   
+  </view>   
+  </scroll-view>
+
+  <scroll-view class="scroll-view_H" scroll-x="true"  wx:if="{{tab4}}"  >
+  <view class="scrollx" wx:for="{{imageUrl}}" wx:key="{{index}}" >
+     <image class="c-pic" src="{{item.n}}" bindtap="startit" data-dataset="{{item}}"></image>   
+  </view>   
+  </scroll-view>   
+
+ <scroll-view class="scroll-view_H" scroll-x="true"  wx:if="{{tab5}}"  >
+  <view class="scrollx" wx:for="{{imageUrl}}" wx:key="{{index}}" >
+     <image class="c-pic" src="{{item.n}}" bindtap="startit" data-dataset="{{item}}"></image>   
+  </view>   
+  </scroll-view>
+
+ <scroll-view class="scroll-view_H" scroll-x="true"  wx:if="{{tab6}}"  >
+  <view class="scrollx" wx:for="{{imageUrl}}" wx:key="{{index}}" >
+     <image class="c-pic" src="{{item.n}}" bindtap="startit" data-dataset="{{item}}"></image>   
+  </view>   
+  </scroll-view>
+
+   
+</view>
+</view>
+<view class="openbtn" wx:if="{{showit}}" bindtap="setsuit">
+  <image class="openpic" src="/assets/images/index/open.png"></image>
+</view>

@@ -1,0 +1,55 @@
+<view class="containter">
+  
+  <view class="card-head">
+    <view class="tip-center">详情</view>
+  </view>
+
+  <view class="card">
+    <view bindtap="enterhost" data-dataset="{{userData}}">
+     <image class="card-avatar"   src="{{userData.avatar_url}}" mode="cover" >
+     </image>
+    </view>
+     <view class="card-name">{{userData.content}}</view>
+      <image class="card-pic" src="{{userData.pic_url}}" mode="aspectFit">
+      </image>
+     <view class="floatbtn">
+    <image class="card-makecom"   src="/assets/images/detail/comment.png" mode="cover" bindtap="makecom"></image>
+    <image class="card-like"  src="/assets/images/detail/like.png"  mode="cover" bindtap="makelike"></image>
+    
+      </view> 
+    <view class="card-detail">
+        <image  src="/assets/images/like.png" mode="cover"></image>
+        <text>{{userData.likes_num}}喜欢</text>
+        <image    src="/assets/images/see.png" mode="cover"></image>
+        <text>{{userData.views_num}}浏览</text>
+    </view>
+
+      <view class="card-desc">{{userData.content}}</view>
+      <view class="card-tips" wx:for="{{userData.tags}}" wx:key="{{index}}">
+      {{item.tag_name}}
+      </view>
+  </view>
+  <view class="comment">
+    <view class="com-head">评论 {{userData.comments_num}}</view>
+    <view class="com-tips" wx:for="{{com}}" wx:key="{{index}}" >
+      <view bindtap="enterta" data-dataset="{{item}}">
+        <image class="com-avatar"   src="{{item.avatar_url}}" mode="cover" ></image>
+      </view>
+        <view bindtap="docomment" data-dataset="{{item}}">
+        <view class="com-time">{{item.created_at}}</view>
+        <view class="com-name">{{item.fromName}}</view>
+      
+       <view class="com-refer" wx:if="{{item.refer}}">
+         {{item.refer}}
+       </view>
+        <view class="com-mess">{{item.content}}</view>
+        </view>
+     </view> 
+  </view>
+  <view wx:if="{{showtextarea}}" style="margin:50rpx 20rpx;">
+    <text wx:if="{{toflag}}">回复ta</text>
+    <textarea id="textcom" bindblur="bindTextAreaBlur" show-confirm-bar auto-focus auto-height placeholder="自动变高" bindconfirm="makecompost" />
+ </view>
+</view> 
+
+

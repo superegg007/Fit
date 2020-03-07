@@ -1,0 +1,21 @@
+.inputarea{
+  margin:  30rpx 35rpx 30rpx 35rpx;
+  width: 87%;
+  border: 1rpx solid#8AA5D5;
+  background-color: #F1F1F1;
+  padding: 20rpx 15rpx;
+  border-radius: 10rpx;
+}
+.frame{
+  line-height: 50rpx;
+  width: 80%;
+  margin:50rpx;
+  font-size: 32rpx;
+  color: #898989;
+}
+.btn{
+  color: #8AA5D5;
+  width: 300rpx;
+  border: 1rpx solid #8AA5D5;
+  background-color: white;
+}

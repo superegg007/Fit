@@ -1,0 +1,6 @@
+<view >
+  <form bindsubmit="bindFormSubmit">
+    <textarea class="inputarea" placeholder-class="frame" placeholder="感谢你的吐槽或建议，我们每分每秒都在改进" name="textarea"/>
+    <button class="btn" form-type="submit"> 提交 </button>
+  </form>
+</view>

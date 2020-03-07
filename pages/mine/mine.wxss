@@ -1,0 +1,62 @@
+/* 头部部分样式 */
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 28rpx;
+  padding: 0 28rpx;
+}
+
+.header_text {
+  margin-left: 40rpx;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+}
+
+.header-details {
+  margin-left: 100rpx;
+}
+
+.liked-fan {
+  display: flex;
+  flex-direction: row;
+}
+
+.liked-fan-details {
+  width: 100rpx;
+  text-align: center;
+}
+
+.cell-total-title {
+  margin: 25rpx;
+  color: #8aa5d5;
+  font-size: 36rpx;
+}
+
+.user-logout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgba(140, 149, 234, 0.10);
+  padding: 48rpx;
+}
+
+.user-logout button {
+  background-color: rgba(140, 149, 234, 0.10);
+  width: 380rpx;
+}
+
+.weui-cell__bd {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.weui-badge {
+  height: 80%;
+}

@@ -1,0 +1,54 @@
+{
+  "pages": [
+    
+    "pages/mine/mine",
+    "pages/mine/change/set",
+    "pages/login/login",
+    "pages/index/index",
+    
+    "pages/mine/feedback/feedback",
+    "pages/circle/circle",
+    "pages/wardrobe/wardrobe",
+    "pages/circle/detail/detail"
+  ],
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#1E8AE8",
+    "borderStyle": "white",
+    "list": [
+      {
+        "iconPath": "assets/images/tabbar/yijia.png",
+        "selectedIconPath": "assets/images/tabbar/yijia2.png",
+        "pagePath": "pages/index/index",
+        "text": "试衣间"
+      },
+      {
+        "iconPath": "assets/images/tabbar/dianpu.png",
+        "selectedIconPath": "assets/images/tabbar/dianpu2.png",
+        "pagePath": "pages/wardrobe/wardrobe",
+        "text": "衣橱"
+      },
+      {
+        "iconPath": "assets/images/tabbar/xingqiu.png",
+        "selectedIconPath": "assets/images/tabbar/xingqiu2.png",
+        "pagePath": "pages/circle/circle",
+        "text": "圈子"
+      },
+      {
+        "iconPath": "assets/images/tabbar/mine.png",
+        "selectedIconPath": "assets/images/tabbar/mine2.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+    
+  },
+  "sitemapLocation": "sitemap.json"
+}

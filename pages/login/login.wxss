@@ -1,0 +1,57 @@
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.body {
+  width: 100%;
+  height: 500rpx;
+}
+
+.body .input-phone {
+  box-sizing: border-box;
+  margin: 50rpx 80rpx;
+  height: 80rpx;
+  border: 1px solid #9a9a9a;
+  border-radius: 10rpx;
+}
+
+.body .input-phone input {
+  margin-top: 19rpx;
+  padding-left: 30rpx;
+}
+
+.body .code {
+  position: relative;
+  height: 80rpx;
+  margin: 0 80rpx;
+  border: 1px solid #9a9a9a;
+  border-radius: 10rpx;
+}
+
+.body .code .input-code {
+  display: inline-block;
+  padding-left: 30rpx;
+  margin-top: 19rpx;
+}
+
+.body .code .input-code input {
+}
+.body .code .send-code-container {
+  position: absolute;
+  display: inline-block;
+  right: 20rpx;
+}
+
+.body .code .send-code-container button {
+  width: 150rpx !important;
+  height: 60rpx !important;
+  margin-top: 10rpx;
+  font-size: 25rpx !important;
+  padding: 0;
+  margin-left: 20rpx;
+}
+
+.body .login {
+  margin-top: 100rpx;
+}

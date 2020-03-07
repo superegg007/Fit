@@ -1,0 +1,80 @@
+page{
+  background-color: #f9f9f9;
+}
+.inputarea{
+  margin:  30rpx 35rpx 30rpx 35rpx;
+  width: 87%;
+  border: 1rpx solid#8AA5D5;
+  background-color: #F1F1F1;
+  padding: 20rpx 15rpx;
+  border-radius: 10rpx;
+}
+.frame{
+  line-height: 50rpx;
+  width: 80%;
+  margin:50rpx;
+  font-size: 32rpx;
+  color: #898989;
+}
+.inputtext{
+  font-size:31rpx;
+}
+.usericon{
+  margin: 20rpx;
+  display: inline-block;
+  color:#898989;
+  font-size: 33rpx;
+}
+.iconcard{
+  display: block;
+  width:100%;
+  height: 220rpx;
+  background-color: #fff;
+  border: 1rpx solid #f2f2f2;
+  
+}
+.myicon{
+  display: inline-block;
+  width: 130rpx;
+  height: 130rpx;
+  background-color: #cecece;
+  border-radius: 50%;
+  opacity: 0.7;
+  vertical-align: middle;
+  margin: 50rpx 30rpx;
+}
+.changeicon{
+  width: 250rpx !important;
+  font-size: 32rpx !important;
+  color: #999 !important;
+  margin-top: 100rpx !important;
+  margin-left: 450rpx !important;
+  background-color: #fff !important;
+}
+.list{
+  margin: 5rpx 0rpx;
+  width: 100%;
+  background-color: #fff;
+}
+.tip{
+  height: 120rpx;
+  border: 1rpx solid #f2f2f2;
+}
+.tip_header{
+  display: inline-block;
+  margin: 40rpx 20rpx;
+  display: inline-block;
+  color:#898989;
+  font-size: 33rpx;
+}
+.tip_data{
+  display: inline-block;
+  margin-left: 10%;
+  
+}
+.tip_data input{
+  display: inline-block;
+  vertical-align: middle;
+  height: 100rpx;
+  width:220rpx;
+}

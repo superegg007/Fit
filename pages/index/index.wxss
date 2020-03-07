@@ -1,0 +1,64 @@
+.okbtn{
+  margin-left:80%;
+  height: 50rpx;
+  width: 80rpx;
+  background-color:#8AA5D5;
+}
+.okpic{
+  height: 50rpx;
+  width: 80rpx;
+}
+.scroll-view_H{
+  
+  width: 100%;
+  height: 250rpx;
+  white-space: nowrap; 
+  
+}
+.scrollx{
+  display: inline-block;
+  width: 250rpx;
+  height: 250rpx;
+ 
+}
+.c-pic{
+  
+  width: 250rpx;
+  height: 250rpx;
+}
+.m-pic{
+  
+  width: 100rpx;
+  height: 100rpx;
+}
+.try-movable{
+  width: 80%;
+  height: 900rpx;
+  margin: 5% 10%;
+  border: 1px solid #8AA5D5;
+  border-radius: 5%;
+}
+.openbtn{
+  position: relative;
+  top:-400rpx;
+  left:0rpx;
+  width: 100%;
+  height: 400rpx;
+  background-color: 	rgba(153,153,153,0.1);
+  
+}
+.byebtn{
+  position: relative;
+  top:-400rpx;
+  left:0rpx;
+  width: 100%;
+  height: 400rpx;
+  background-color: 	rgba(255,255,255,0.6);
+  
+}
+
+.openpic{
+  width:100%;
+  height: 100%;
+  opacity: 1.0;
+}

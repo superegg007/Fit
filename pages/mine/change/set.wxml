@@ -1,0 +1,54 @@
+<view class="iconcard" bindtap='uploadPhoto'>
+  <view class="usericon">
+    <i-icon size="20" type="mine" />头像</view>
+  <image class="myicon" src="{{userinfo.avatar_url}}"></image>
+</view>
+
+<view class="list">
+  <view class="tip" bindtap="changename">
+    <view class="tip_header">
+      <i-icon size="20" type="editor" />昵称</view>
+    <view class="tip_data">
+      <input placeholder-class="inputtext" maxlength="7" bindinput="getnickname" placeholder="{{userinfo.nickname}}" />
+    </view>
+  </view>
+
+  <view class="tip" bindtap="changephone">
+    <view class="tip_header">
+      <i-icon size="20" type="dynamic" />性别</view>
+    <view class="tip_data">
+      <input placeholder-class="inputtext" maxlength="1" bindinput="getsex" placeholder="{{userinfo.sex}}" />
+    </view>
+  </view>
+
+  <view class="tip" bindtap="changephone">
+    <view class="tip_header">
+      <i-icon size="20" type="activity" />年龄</view>
+    <view class="tip_data">
+      <input placeholder-class="inputtext" maxlength="2" bindinput="getage" placeholder="{{userinfo.age}}" />
+    </view>
+  </view>
+  
+  <view class="tip" bindtap="changename">
+    <view class="tip_header">
+      <i-icon size="20" type="play" />身高</view>
+    <view class="tip_data">
+      <input placeholder-class="inputtext" maxlength="3" bindinput="getheight" placeholder="{{userinfo.height}}" />
+    </view>
+  </view>
+  <view class="tip" bindtap="changephone">
+    <view class="tip_header">
+      <i-icon size="20" type="barrage" />体重</view>
+    <view class="tip_data">
+      <input placeholder-class="inputtext" maxlength="3" bindinput="getweight" placeholder="{{userinfo.weight}}" />
+    </view>
+  </view>
+  <view>
+    <form bindsubmit="signature">
+      <textarea class="inputarea" placeholder-class="frame" maxlength="42" placeholder="个人简介" name="textarea" bindblur="getsignature"/>
+    </form>
+  </view>
+  <view>
+   <button class="uploadinfo" bindtap="uploadinformation">提交</button>
+  </view>
+</view>
